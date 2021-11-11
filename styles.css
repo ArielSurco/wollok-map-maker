@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.data-section {
+    display: flex;
+    width: 80%;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.width-height-inputs, .offset-inputs {
+    display: flex;
+    width: 100%;
+    column-gap: 10px;
+}
+
+.map-creator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map-container {
+    min-width: min-content;
+    margin: 0 auto;
+}
+
+.reversible-card {
+    position: relative;
+    max-width: 20px;
+    min-height: 20px;
+    transform-style: preserve-3d;
+    transition: all 0.3s ease;
+    margin-bottom: 1px;
+}
+
+.reversible-card:hover {
+    transform: scale(1.2);
+    box-shadow: 4px 4px 25px -1px rgb(90, 46, 46);
+}
+
+.reversible-card__front, .reversible-card__back {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.reversible-card__front {
+    transform: rotateY(0deg);
+    background-color: #31acd4;
+}
+
+.reversible-card__back {
+    transform: rotateY(180deg);
+    background-color: #ff13ac;
+}
+
+.reversible-card.reverse {
+    transform: rotateY(180deg);
+}
